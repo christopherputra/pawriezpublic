@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Pup | bulubulu</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar">
+	<img src="images/logo.png" class="logo">
+	<img src="images/warna.png" class="logocolor">
+	<div class="navraces">
+		<div class="navrace">POM</div>
+		<div class="navrace">CORGI</div>
+		<div class="navrace">GOLDEN</div>
+		<div class="navrace">POODLE</div>
+		<div class="navrace">HUSKY</div>
+	</div>
+	<a class="button loginbutton" href="signin.html">LOG IN</a>
+</nav>
+<div class="addpupform">
+	<div class="editmemoriestitle">Memories</div>
+	<div class="story sample">
+			<div class="storyimage"></div>
+			<div class="storyinputdetail">
+				<input type="text" class="storyinputtitle" placeholder="Title">
+				<textarea class="storyinputdescription" placeholder="Description"></textarea>
+			</div>
+			<div class="tools">
+				<img src="images/arrow.png" class="arrows" id="arrowtop">
+				<img src="images/arrow.png" class="arrows" id="arrowdown">
+				<img src="images/trash.png" class="trash">
+			</div>
+		</div>
+	<div class="stories">
+		<div class="story">
+			<div class="storyimage"></div>
+			<div class="storyinputdetail">
+				<input type="text" class="storyinputtitle" placeholder="Title">
+				<textarea class="storyinputdescription" placeholder="Description"></textarea>
+			</div>
+			<div class="tools">
+				<img src="images/arrow.png" class="arrows" id="arrowtop">
+				<img src="images/arrow.png" class="arrows" id="arrowdown">
+				<img src="images/trash.png" class="trash">
+			</div>
+		</div>
+		<div class="story">
+			<div class="storyimage"></div>
+			<div class="storyinputdetail">
+				<input type="text" class="storyinputtitle" placeholder="Title">
+				<textarea class="storyinputdescription" placeholder="Description"></textarea>
+			</div>
+			<div class="tools">
+				<img src="images/arrow.png" class="arrows" id="arrowtop">
+				<img src="images/arrow.png" class="arrows" id="arrowdown">
+				<img src="images/trash.png" class="trash">
+			</div>
+		</div>
+	</div>
+		<div class="addstorybutton">+</div>
+		<div class="submitstorybutton button">SUBMIT</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("body").on("click","#arrowtop",function(){
+			var now = $(this).parent().parent();
+			var before = now.prev(".story");
+			if(before.length){
+				now.fadeOut();
+				before.fadeOut(function(){
+					before.before(now);
+					now.fadeIn();
+					before.fadeIn(function(){
+						$('html, body').animate({
+					        scrollTop: now.offset().top - 300
+					    }, 300);
+					});
+				});
+			}
+		});
+		$("body").on("click","#arrowdown",function(){
+			var now = $(this).parent().parent();
+			var next = now.next(".story");
+			if(next.length){
+				now.fadeOut();
+				next.fadeOut(function(){
+					next.after(now);
+					now.fadeIn();
+					next.fadeIn(function(){
+						$('html, body').animate({
+					        scrollTop: now.offset().top - 300
+					    }, 300);
+					});
+				});
+			}
+		});
+		$("body").on("click",".trash",function(){
+			if($(".stories .story").length > 1){
+				$(this).parent().parent().fadeOut(function(){
+					$(this).remove();
+				});
+			}
+		});
+		$(".addstorybutton").click(function(){
+			var newstory = $(".sample").clone().removeClass("sample");
+			newstory.hide();
+			$(".stories").append(newstory);
+			newstory.fadeIn();
+			$('html, body').animate({
+		        scrollTop: newstory.offset().top - 300
+		    }, 300);
+		});
+	});
+</script>
+</html>

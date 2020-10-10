@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Pup | bulubulu</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar">
+	<img src="images/logo.png" class="logo">
+	<img src="images/warna.png" class="logocolor">
+	<div class="navraces">
+		<div class="navrace">POM</div>
+		<div class="navrace">CORGI</div>
+		<div class="navrace">GOLDEN</div>
+		<div class="navrace">POODLE</div>
+		<div class="navrace">HUSKY</div>
+	</div>
+	<a class="button loginbutton" href="signin.html">LOG IN</a>
+</nav>
+<div class="addpupform">
+	<div class="addpupidentity">
+		<div class="addpupimagecontainer">
+			<div class="addpupimagepost">
+			<label for="file-upload" class="custom-file-upload">
+		   		Insert Image
+			</label>
+			<input id="file-upload" type="file"/>
+			</div>
+		</div>
+		<div class="addpupdetailidentity">
+			<div class="pupname">Hello, i am<input type="text" placeholder="Pup name" class="addpupname"></div>
+			<div class="pupname">I was born on<input type="date" placeholder="Pup name" class="pupbirthdate"></div>
+			<div class="gendercontainer">
+				<div class="genderswitch">
+					<img src="images/male.png" class="genderinput">
+					<img src="images/female.png" class="genderinput" id="female">
+					<div class="genderswitcher"></div>
+				</div>
+				<div class="gendertag" id="malechosen">Male</div>
+			</div>
+			<div class="racechoosetitle">Race</div>
+			<input type="text" class="raceinput" placeholder="search">
+			<div class="racechoosecontainer">
+				<div class="racechoose">Husky</div>
+				<div class="racechoose">Golden</div>
+				<div class="racechoose">Pom</div>
+				<div class="racechoose">German Shepherd</div>
+				<div class="racechoose">Shin Tzu</div>
+				<div class="racechoose">Corgi</div>
+				<div class="racechoose">Poodle</div>
+			</div>
+		</div>
+		<div class="relationships">
+			<div class="relationshiptitle">Relationships</div>
+			<div class="relationship notadded">
+				<div class="relationshipimagecontainer">
+					<img class="relationshipimage" src="images/dog.png">
+					<div class="addrelationshipbutton">+</div>
+				</div>
+				<div class="relations">
+					<div class="cancelrelation">x</div>
+					<img src="images/lovers.png" class="relation">
+					<img src="images/partners.png" class="relation" id="partners">
+				</div>
+			</div>
+			<div class="relationship notadded">
+				<div class="relationshipimagecontainer">
+					<img class="relationshipimage" src="images/dog.png">
+					<div class="addrelationshipbutton">+</div>
+				</div>
+				<div class="relations">
+					<div class="cancelrelation">x</div>
+					<img src="images/lovers.png" class="relation">
+					<img src="images/partners.png" class="relation" id="partners">
+				</div>
+			</div>
+		</div>
+	</div>
+	<img src="images/warna.png" class="sparatoridentity">
+	<div class="addpupmermoriestitle">Memories</div>
+	<div class="addpupmemorieshint">Write down your story and memories with the one. You should write all of your memories including the sad one. Keep the memories live forever</div>
+		<div class="story sample">
+			<div class="storyimage"></div>
+			<div class="storyinputdetail">
+				<input type="text" class="storyinputtitle" placeholder="Title">
+				<textarea class="storyinputdescription" placeholder="Description"></textarea>
+			</div>
+			<div class="tools">
+				<img src="images/arrow.png" class="arrows" id="arrowtop">
+				<img src="images/arrow.png" class="arrows" id="arrowdown">
+				<img src="images/trash.png" class="trash">
+			</div>
+		</div>
+	<div class="stories">
+		<div class="story">
+			<div class="storyimage"></div>
+			<div class="storyinputdetail">
+				<input type="text" class="storyinputtitle" placeholder="Title">
+				<textarea class="storyinputdescription" placeholder="Description"></textarea>
+			</div>
+			<div class="tools">
+				<img src="images/arrow.png" class="arrows" id="arrowtop">
+				<img src="images/arrow.png" class="arrows" id="arrowdown">
+				<img src="images/trash.png" class="trash">
+			</div>
+		</div>
+		<div class="story">
+			<div class="storyimage"></div>
+			<div class="storyinputdetail">
+				<input type="text" class="storyinputtitle" placeholder="Title">
+				<textarea class="storyinputdescription" placeholder="Description"></textarea>
+			</div>
+			<div class="tools">
+				<img src="images/arrow.png" class="arrows" id="arrowtop">
+				<img src="images/arrow.png" class="arrows" id="arrowdown">
+				<img src="images/trash.png" class="trash">
+			</div>
+		</div>
+	</div>
+		<div class="addstorybutton">+</div>
+		<div class="submitstorybutton button">SUBMIT</div>
+</div>
+<div class="footer">
+	<div class="powered">powered by <span class="important">anabulku.id</span></div>
+	<div class="footercontainer">
+		<div class="menus">
+			<div class="menu">Home</div>
+			<div class="menu">About</div>
+			<div class="menu">Terms & Conditions</div>
+			<div class="menu">Privacy Policy</div>
+			<div class="menu">Help & Support</div>
+		</div>
+		<div class="menus">
+			<div class="menu">Memories</div>
+			<div class="menu">Account</div>
+			<div class="menu">Pets</div>
+		</div>
+	</div>
+	<div class="footerlogocontainer">
+		<img src="images/logo.png" class="footerlogo">
+		<img src="images/warna.png" class="footerwarna">
+	</div>
+	<div class="copyright">bulubulu.id 2020, All Right Reserved</div>
+</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var gender = 0;
+		$(".genderswitch").click(function(){
+			if(gender==1){
+				gender = 0;
+				$(".genderswitcher").animate({"margin-left":"0px"},100);
+				$(".gendertag").html("Male");
+				$(".gendertag").attr("id","malechosen");
+			}
+			else{
+				gender = 1;
+				$(".genderswitcher").animate({"margin-left":"40px"},100);
+				$(".gendertag").html("Female");
+				$(".gendertag").attr("id","femalechosen");
+			}
+		});
+		$(".relation").click(function(){
+			$(this).parent().find(".relation").removeClass("chosen").addClass("relationnotchosen");
+			$(this).addClass("chosen");
+			$(this).parent().addClass("added");
+			$(this).parent().parent().removeClass("notadded");
+			$(this).parent().parent().find(".relationshipimagecontainer").find(".addrelationshipbutton").hide();
+			$(this).parent().find(".cancelrelation").show();
+		});
+
+		$(".cancelrelation").click(function(){
+			$(this).parent().find(".relation").removeClass("chosen").removeClass("relationnotchosen");
+			$(this).parent().removeClass("added");
+			$(this).parent().parent().addClass("notadded");
+			$(this).parent().parent().find(".relationshipimagecontainer").find(".addrelationshipbutton").show();
+			$(this).parent().find(".cancelrelation").hide();
+		});
+		$("body").on("click","#arrowtop",function(){
+			var now = $(this).parent().parent();
+			var before = now.prev(".story");
+			if(before.length){
+				now.fadeOut();
+				before.fadeOut(function(){
+					before.before(now);
+					now.fadeIn();
+					before.fadeIn(function(){
+						$('html, body').animate({
+					        scrollTop: now.offset().top - 300
+					    }, 300);
+					});
+				});
+			}
+		});
+		$("body").on("click","#arrowdown",function(){
+			var now = $(this).parent().parent();
+			var next = now.next(".story");
+			if(next.length){
+				now.fadeOut();
+				next.fadeOut(function(){
+					next.after(now);
+					now.fadeIn();
+					next.fadeIn(function(){
+						$('html, body').animate({
+					        scrollTop: now.offset().top - 300
+					    }, 300);
+					});
+				});
+			}
+		});
+		$("body").on("click",".trash",function(){
+			if($(".stories .story").length > 1){
+				$(this).parent().parent().fadeOut(function(){
+					$(this).remove();
+				});
+			}
+		});
+		$(".addstorybutton").click(function(){
+			var newstory = $(".sample").clone().removeClass("sample");
+			newstory.hide();
+			$(".stories").append(newstory);
+			newstory.fadeIn();
+			$('html, body').animate({
+		        scrollTop: newstory.offset().top - 300
+		    }, 300);
+		});
+	});
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

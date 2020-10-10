@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POST | bulubulu.id</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<nav class="navbar">
+	<img src="images/logo.png" class="logo">
+	<img src="images/warna.png" class="logocolor">
+	<div class="navraces">
+		<div class="navrace">POM</div>
+		<div class="navrace">CORGI</div>
+		<div class="navrace">GOLDEN</div>
+		<div class="navrace">POODLE</div>
+		<div class="navrace">HUSKY</div>
+	</div>
+	<div class="accountbutton button"><img src="images/mypup.png" class="pupbuttonicon">MY PUPS</div>
+</nav>
+<form method="post" class="addactivityform">
+	<div class="pupprofilepost">
+		<div class="activityposttitle">Activity</div>
+	</div>
+<div class="activity">
+	<div class="activityimagecontainer">
+		<div class="activityimagepost">
+			<img src="#" class="activityimagedisplay">
+			<label for="file-upload" class="activity-file-upload">
+		   		Insert Image
+			</label>
+			<input id="file-upload" type="file"/>
+		</div>
+	</div>
+	<div class="storyinputdetail">
+		<img src="images/dog.png" class="pupprofilepostimage">
+		<div class="pupprofilepostname">BULU</div>
+		<input type="text" class="storyinputtitle" placeholder="Title">
+		<div class="textcounter">120</div>
+		<input type="submit" value="POST" class="button submitpostbutton">
+	</div>
+</div>
+</form>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".storyinputtitle").keyup(function(){
+			$(".textcounter").html(120 - $(this).val().length);
+		});
+	});
+</script>
+</html>
